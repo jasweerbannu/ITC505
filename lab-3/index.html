@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Using @font-face</title>
+    <style>
+    @font-face {
+        font-family: 'Jokerman';
+        src: url('fonts/Jokerman.woff2') format('woff2'),
+             url('fonts/Jokerman.woff') format('woff'),
+             url('fonts/Jokerman.ttf') format('truetype');
+        
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    body {
+        font-family: 'Jokerman', sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    h1, h3 {
+            text-align: center;        }
+    </style>
+</head>
+<body>
+    <h1>LAB 3: SERVING FONTS</h1>
+    <h3>JOKERMAN FONT</h3>
+    <p>
+        I am using the <code>@font-face</code> rule, which is a CSS rule allowing developers to define custom fonts for their websites. It ensures consistent typography across all devices and different browsers.
+    </p>
+    <p>
+        Initially, we need to check if the font is available in various formats like 'WOFF2', 'WOFF', 'TTF', etc., to ensure compatibility across different browsers. Older browsers generally support 'TTF' or 'OTF', while modern browsers support 'WOFF2' and 'WOFF'.
+    </p>
+    <p>
+        Then, in our CSS file, we define the <code>@font-face</code> rule to specify the font-family name ('Jokerman') and the source URLs for the font files. This allows the browser to download the font if it's not already available locally.
+    </p>
+    <p>
+        Once we've defined the <code>@font-face</code>, we can use our custom font in our CSS using the <code>font-family</code> property. If our custom font isn't loaded for any reason, we provide a fallback mechanism to ensure another font is rendered. Here I added the "sans-serif" as fallback mechanism font.
+    </p>
+<footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
