@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  background-color: #87CEEB; /* Sky blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure full viewport height */
+}
+
+.sunrise-container {
+  width: 70%; /* Full width */
+  text-align: center; /* Center the SVG */
+  overflow: hidden; /* Hide any overflow */
+  position: relative; /* Ensure z-index works */
+}
+
+.sunrise-svg {
+  max-width: 100%; /* Ensure SVG doesn't overflow horizontally */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.mountain {
+  fill: #B0C4DE; /* Light grey for mountains */
+}
+
+.sun {
+  fill: #FFD700; /* Yellow for the sun */
+  animation: sunrise 8s linear infinite, fade-in 1s forwards; /* Sunrise animation */
+  transform-origin: center bottom; /* Ensure sun rises from bottom */
+  position: absolute; /* Position sun behind mountains */
+  z-index: -1; /* Place sun behind mountains */
+  opacity: 0; /* Start with sun hidden */
+}
+
+@keyframes sunrise {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-70px); opacity: 1; }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
