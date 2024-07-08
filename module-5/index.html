@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness and Gym Products</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="https://example.com/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#contact" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <section id="home" class="active">
+        <div id="hero">
+          <h1>Fitness Hub</h1>
+          <p>Your one-stop shop for premium fitness and gym products.</p>
+        </div>
+        <div class="section-content">
+          <img
+            src="main_img1.jpg"
+          />
+          <div>
+            <h2>Our Products</h2>
+            <p>
+              Our premium fitness and gym products are designed to elevate your workout experience. From durable, high-quality equipment like dumbbells and resistance bands to state-of-the-art treadmills and exercise bikes, we cater to all fitness levels. Each product is crafted with precision to ensure safety, reliability, and maximum performance. Our apparel line offers comfortable, stylish, and breathable options to keep you motivated and confident during your workouts. Whether you're setting up a home gym or enhancing your fitness routine, our range of products is your perfect companion for achieving your health and fitness goals.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="section-content">
+          <img
+            src="main_img2.jpg"
+          />
+          <div>
+            <h2>About Us</h2>
+            <p>
+              Fitness Hub is your premier source for top-tier fitness and gym products, dedicated to empowering individuals on their fitness journeys. We curate a comprehensive selection of high-quality equipment, from robust dumbbells and versatile resistance bands to cutting-edge treadmills and exercise bikes. Our commitment to excellence ensures each product is crafted for durability, safety, and performance, supporting enthusiasts of all levels. Complementing our equipment, our stylish and comfortable apparel line enhances confidence and performance during workouts. With a customer-first approach, Fitness Hub provides expert guidance and exceptional service, aiming to inspire and support every step of your fitness evolution.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="products">
+  <div class="section-content">
+   <div style="float: left;">
+    <img src="pr1.jpg" alt="Product 1" style="width: 200px; height: 200px; object-fit: cover; float: left; margin-right: 20px;">
+    <div style="padding: 10px;">
+      <h2>Product 1</h2>
+      <p>Enhance strength training with our durable and versatile barbells, perfect for powerlifting and muscle building.</p>
+    </div>
+   </div>
+    <div style="float: left;">
+    <img src="pr2.jpg" alt="Product 2" style="width: 200px; height: 200px; object-fit: cover; float: left; margin-right: 20px;">
+    <div style="padding: 10px;">
+      <h2>Product 2</h2>
+      <p>Improve core stability and balance with our premium gym balls, ideal for workouts and physical therapy.</p>
+    </div>
+   </div>
+    <div style="float: left;">
+	
+    <img src="pr3.jpg" alt="Product 3" style="width: 200px; height: 200px; object-fit: cover; float: left; margin-right: 20px;">
+    <div style="padding: 10px;">
+      <h2>Product 3</h2>
+      <p>Achieve your fitness goals with our ergonomic dumbbells, designed for strength training and muscle toning.</p>
+    </div>
+    </div>
+   <div style="float: left;">
+    <img src="pr4.jpg" alt="Product 4" style="width: 200px; height: 200px; object-fit: cover; float: left; margin-right: 20px;">
+    <div style="padding: 10px;">
+      <h2>Product 4</h2>
+      <p>Elevate your cardio routine with our advanced treadmills, featuring adjustable settings and robust construction for a superior workout experience.</p>
+    </div>
+    </div>
+  </div>
+</section>
+      <section id="contact">
+        <div class="section-content">
+          <img
+            src="cu.jpg"
+            alt="Contact Us"
+          />
+          <div>
+            <h2>Contact Us</h2>
+            <p>
+              Have questions? Reach out to us to learn more about our products.
+            </p>
+            <p>
+              Email:
+              <a href="mailto:info@fitnesshub.com">info@fitnesshub.com</a>
+            </p>
+            <p>Phone: <a href="tel:+1 234 567 890">+1 234 567 890</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>&copy; 2024 Fitness Hub. All rights reserved.</footer>
+
+    <script>
+      const navLinks = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll("section");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetSection = document.querySelector(
+            this.getAttribute("href")
+          );
+
+          sections.forEach((section) => {
+            section.classList.remove("active");
+          });
+
+          targetSection.classList.add("active");
+        });
+      });
+
+      document.getElementById("home").classList.add("active");
+    </script>
+  </body>
+</html>
