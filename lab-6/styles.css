@@ -1,0 +1,194 @@
+/* Main layout */
+body {
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'sidebar main aside'
+        'footer footer footer';
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 190px 2fr 190px; /* Adjusted sidebar width */
+    gap: 10px;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    grid-area: header;
+    background: #0f2d4e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    grid-area: main;
+    background: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.aside {
+    grid-area: aside;
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside a {
+    display: block;
+    margin-bottom: 10px; /* Adjust spacing between images */
+}
+
+.aside img {
+    width: 100%; /* Ensure images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Limit maximum width */
+}
+
+
+
+footer {
+    grid-area: footer;
+    background: #0f2d4e;
+    color: white;
+    text-align: center;
+}
+
+/* Sidebar Styles */
+.w3-sidebar {
+    grid-area: sidebar;
+    padding: 20px;
+    text-align: center;
+    height: 100%; /* Make sidebar fill height */
+    overflow-y: auto; /* Enable scrolling if needed */
+    background-color: #0f2d4e; /* Grey background color */
+}
+
+.w3-bar-item {
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.w3-bar-item:hover {
+    background-color: #ddd;
+}
+
+/* Input and Button Styles */
+input[type="text"], input[type="datetime-local"] {
+    width: calc(100% - 20px); /* Adjusted input width */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+#taskSections table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd; /* Lighter border for current tasks */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+#taskSections th, #taskSections td {
+    padding: 12px; /* Increased padding for better spacing */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Bottom border for each row */
+}
+
+#taskSections th {
+    background-color: #f2f2f2; /* Light gray background for table header */
+    color: #333; /* Darker text color for headers */
+}
+
+#taskSections tr:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+}
+
+/* Completed Tasks Table */
+#completedTasksTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc; /* Border around the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+}
+
+#completedTasksTable th, #completedTasksTable td {
+    padding: 12px; /* Increased padding for better spacing */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Bottom border for each row */
+}
+
+#completedTasksTable th {
+    background-color: #f2f2f2; /* Light gray background for table header */
+    color: #333; /* Darker text color for headers */
+}
+
+#completedTasksTable tr:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+}
+
+/* Clear All Button Styles */
+#clearAllButton {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+#clearAllButton:hover {
+    background-color: #c82333;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional Styles for Add Task Button */
+#addTaskButton {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px; /* Adjust as needed */
+    line-height: 1; /* Ensure the line height is normalized */
+}
