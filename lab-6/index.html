@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My To-Do List</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar">
+        <a href="#" class="w3-bar-item w3-button">Home</a>
+        <a href="#" class="w3-bar-item w3-button">About</a>
+        <a href="#" class="w3-bar-item w3-button">Contact</a>
+    </div>
+
+    <main>
+        <h2>To-Do List</h2>
+        <div>
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <input type="datetime-local" id="taskDateTime">
+            <button id="addTaskButton">Add Task</button>
+        </div>
+        <div id="taskSections"></div>
+        
+        <div id="completedTasksSection">
+            <h2>Completed Tasks</h2>
+            <table id="completedTasksTable">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Start Date</th>
+                        <th>Completed Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Completed tasks will be appended here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <button id="clearAllButton" style="display: none;">Clear All</button> <!-- Initially hidden -->
+    </main>
+
+    <aside class="aside">
+        <a href="https://www.amazon.com/Under-Armour-unisex-adult-Undeniable-Metallic/dp/B093LPX4G1/ref=sr_1_5?crid=DWKXO9D82IYJ&dib=eyJ2IjoiMSJ9.CrUXV6InrnKNeRN1xOs9ratpxJIt008GOmji2RKFDFcJYBhdWrLP4K64ZLGnSJYqkafMD-tTP61GdmE9RdhK2xRy3y8lTobkGeQVQu89OAqTXAy3S6MB4t68KtYvtP4k5Unz243prK3_EIN_b1Yr_FflvZb8QJ-VH8R3LlNWc6tXJnAUM1-M5wlafiDySRrpFI6R9kJsB2X8Dp6uBPp7-mMfUY4LV1eatuekTKFJ6OFXAwBi29fc4ut9uNBhHr1t7NqXTF9siwZKokFVIJJf-XM6Y7MxEyB_cjQJWbM2tvo.VaX59BU25YYB5_39pAMLaB81SiiAPEy-Tp69IC2-G-U&dib_tag=se&keywords=gym+bag&qid=1721081020&sprefix=gym%2Caps%2C151&sr=8-5" target="_blank">
+            <img src="img1.webp" alt="Advertisement">
+        </a>
+        <a href="https://www.amazon.com/NELEUS-Workout-Sleeveless-Running-Shirts/dp/B0BCPL2YSJ/ref=sr_1_8?crid=2PIINXQLDW2Q8&dib=eyJ2IjoiMSJ9.W9y9jkxJ1SrTcGotvhvoIxb5-tLembFq33fKJSjW98_ZOjOOz2R-yQAEP1HgPWFiAmO4FhaJD-LvlJFG7kER0zuMXqssaHArIEGpADxBx4Jan7afE5kZeR2-mkxeFKe49a41hVB3znWtwhcosFWF8kRPOYY3hbbLN5G-0k-nEyfwWN3LxVmT_ujqh8W5kGfXjVi8fB2_zIYFIE4PJI5XB7xFYM9BAGs8RfRa_dfZWiH9woWAgOt3v_lfJIGpE1Z5-0JMiXpVda57yrrv1W0-Z8IA4RuVEg3ikYwpZwOiBwc.xw3Ow4br3tqtXpUnBXCGgPiTrA57XGwYRyd1rC_aQIQ&dib_tag=se&keywords=gym+accessories+for+men&qid=1721080743&sprefix=gym+acc%2Caps%2C189&sr=8-8" target="_blank">
+            <img src="img2.webp" alt="Advertisement">
+        </a>
+    </aside>
+    
+
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
