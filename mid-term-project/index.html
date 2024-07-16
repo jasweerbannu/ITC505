@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Quest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fantasy Quest</h1>
+    </header>
+    <main>
+        <div id="story">
+            <!-- Story text will appear here -->
+        </div>
+        <button id="restartGame" style="display: none;">Restart Game</button>
+        <div id="image">
+            <!-- Image related to the current stage will appear here -->
+        </div>
+        <div id="choices">
+            <!-- Choices buttons will appear here -->
+        </div>
+        
+    </main>
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p>Addendum: During the development of "Fantasy Quest," my primary focus was to create an engaging and immersive user experience. I aimed to combine rich storytelling with interactive elements, ensuring that users felt a part of the narrative.
+
+            The initial step involved structuring the HTML to provide a clear and accessible framework. I used a `header` for the title, a `main` section to display the story, choices, and images, and a `footer` for additional information, including the last modified date.
+            
+            In CSS, I concentrated on enhancing the visual appeal and immersion. I selected a neutral background color and styled the header and footer with a dark theme to contrast the main content. For the story and choices sections, I ensured readability with appropriate font sizes and line heights. The choices are presented as buttons, styled to be visually appealing and interactive, changing color on hover to provide immediate feedback to users.
+            
+            The most significant challenge was balancing the narrative depth with gameplay mechanics. I addressed this by creating structured JavaScript objects to manage the story flow. This approach allowed me to efficiently handle different stages of the story and user choices. Through this process, I gained valuable insights into enhancing user engagement by providing meaningful interactions and maintaining a cohesive narrative.</p>
+        
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
