@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Workout Plan Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weekly Workout Plan Generator</h1>
+        <form id="workoutForm">
+            <label for="fitnessLevel">Fitness Level:</label>
+            <select id="fitnessLevel" name="fitnessLevel">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <label for="fitnessGoal">Fitness Goal:</label>
+            <select id="fitnessGoal" name="fitnessGoal">
+                <option value="Strength Training">Strength Training</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Muscle Hypertrophy">Muscle Hypertrophy</option>
+            </select>
+
+            <label for="equipment">Available Equipment:</label>
+            <select id="equipment" name="equipment">
+                <option value="Dumbbells">Dumbbells</option>
+                <option value="Barbells and Weight Plates">Barbells and Weight Plates</option>
+                <option value="Resistance Bands">Resistance Bands</option>
+                <option value="Treadmill">Treadmill</option>
+            </select>
+
+            <button type="button" onclick="generateWorkoutPlan()">Generate Workout Plan</button>
+        </form>
+        <div id="workoutPlan"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
