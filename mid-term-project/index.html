@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Quest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fantasy Quest</h1>
+    </header>
+    <main>
+        <div id="story">
+            <!-- Story text will appear here -->
+        </div>
+        <div id="image">
+            <!-- Image related to the current stage will appear here -->
+        </div>
+        <div id="choices">
+            <!-- Choices buttons will appear here -->
+        </div>
+    </main>
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+        <p>Addendum: During the development, I focused on creating an immersive experience with rich storytelling and interactive choices. Challenges included balancing narrative depth with gameplay, managed through structured JavaScript objects. Insights gained include enhancing user engagement through meaningful interactions.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>
