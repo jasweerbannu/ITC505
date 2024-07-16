@@ -97,6 +97,7 @@ let story = {
 
 function startGame() {
     currentStage = "start";
+    document.getElementById('restartGame').style.display = 'none';
     updatePage();
 }
 
@@ -129,7 +130,10 @@ function endGame() {
     document.getElementById('story').textContent = stage.text;
     document.getElementById('choices').innerHTML = '';
     document.getElementById('image').innerHTML = `<img src="${stage.image}" alt="Scene Image">`;
+    document.getElementById('restartGame').style.display = 'block';
 }
+
+document.getElementById('restartGame').addEventListener('click', startGame);
 
 let currentStage;
 startGame();
