@@ -1,5 +1,3 @@
-/* Add more styles to enhance visual appeal and immersion */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -37,13 +35,16 @@ main {
     width: 30%;
     display: flex;
     gap: 10px;
-    flex-direction: column;
     align-items: center;
+}
+
+#restartGame{
+    wi
 }
 
 #choices button {
     flex: none; /* Ensure buttons do not stretch */
-  }
+}
 
 button {
     margin: 10px;
@@ -73,8 +74,9 @@ img {
     border-radius: 5px;
     margin-top: 10px;
 }
+
 #image img {
     width: 400px;  /* Set the desired width */
     height: 400px; /* Set the desired height */
     object-fit: cover; /* Maintain aspect ratio and cover the given dimensions */
-  }
+}
