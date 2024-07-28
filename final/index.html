@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Toggle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="play">
+        <h1>Lights Out Game</h1>
+        <button id="start">Start Game</button>
+    </div>
+    <div id="count" style="display: none;">Moves: 0</div> <!-- Move counter -->
+    <div id="tiles" style="display: none;">
+        
+        <div class="grid-container">
+            <!-- Tiles will be generated here -->
+            <div class="tile" id="1"></div>
+            <div class="tile" id="2"></div>
+            <div class="tile" id="3"></div>
+            <div class="tile" id="4"></div>
+            <div class="tile" id="5"></div>
+            <div class="tile" id="6"></div>
+            <div class="tile" id="7"></div>
+            <div class="tile" id="8"></div>
+            <div class="tile" id="9"></div>
+            <div class="tile" id="10"></div>
+            <div class="tile" id="11"></div>
+            <div class="tile" id="12"></div>
+            <div class="tile" id="13"></div>
+            <div class="tile" id="14"></div>
+            <div class="tile" id="15"></div>
+            <div class="tile" id="16"></div>
+            <div class="tile" id="17"></div>
+            <div class="tile" id="18"></div>
+            <div class="tile" id="19"></div>
+            <div class="tile" id="20"></div>
+            <div class="tile" id="21"></div>
+            <div class="tile" id="22"></div>
+            <div class="tile" id="23"></div>
+            <div class="tile" id="24"></div>
+            <div class="tile" id="25"></div>
+        </div>
+        <div id="win" style="display: none;">You Win!</div>
+    </div>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+    <script src="script.js"></script>
+    <h3>Addendum</h3>
+    <ul>
+        <li><strong>Game Idea</strong>: I created a Lights Out game where players turn off lights on a 5x5 grid by clicking tiles.</li>
+        <li><strong>Layout</strong>: The HTML structure includes a start screen with a button to begin the game, making it easy for users to understand.</li>
+        <li><strong>Visual Design</strong>: I chose bright colors for the tiles and a dark background to make the game look good and the lights easy to see.</li>
+        <li><strong>Responsive Design</strong>: I used CSS to ensure the game looks good on different screen sizes, making it accessible for all users.</li>
+        <li><strong>Game Logic</strong>: I wrote JavaScript to control how the game works, like generating patterns and toggling lights when tiles are clicked.</li>
+        <li><strong>Move Counter</strong>: I added a counter to show how many moves the player has made, giving them feedback on their progress.</li>
+        <li><strong>Win Condition</strong>: When all lights are off, a pop-up message appears to let the player know they won the game.</li>
+        <li><strong>Challenges</strong>: I faced issues with getting the tiles to display in a grid, which I fixed using CSS Flexbox for a better layout.</li>
+        <li><strong>Debugging</strong>: I improved my debugging skills by finding and fixing problems in the code that caused the game to misbehave.</li>
+        <li><strong>Learning</strong>: This project taught me the importance of planning, user experience, and problem-solving in game development.</li>
+    </ul>
+</body>
+</html>
