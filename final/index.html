@@ -3,56 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Toggle Game</title>
+    <title>Revenge of Lights Out</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="play">
-        <h1>Lights Out Game</h1>
-        <button id="start">Start Game</button>
-    </div>
-    <div id="count" style="display: none;">Moves: 0</div> <!-- Move counter -->
-    <div id="tiles" style="display: none;">
-        
-        <div class="grid-container">
-            <!-- Tiles will be generated here -->
-            <div class="tile" id="1"></div>
-            <div class="tile" id="2"></div>
-            <div class="tile" id="3"></div>
-            <div class="tile" id="4"></div>
-            <div class="tile" id="5"></div>
-            <div class="tile" id="6"></div>
-            <div class="tile" id="7"></div>
-            <div class="tile" id="8"></div>
-            <div class="tile" id="9"></div>
-            <div class="tile" id="10"></div>
-            <div class="tile" id="11"></div>
-            <div class="tile" id="12"></div>
-            <div class="tile" id="13"></div>
-            <div class="tile" id="14"></div>
-            <div class="tile" id="15"></div>
-            <div class="tile" id="16"></div>
-            <div class="tile" id="17"></div>
-            <div class="tile" id="18"></div>
-            <div class="tile" id="19"></div>
-            <div class="tile" id="20"></div>
-            <div class="tile" id="21"></div>
-            <div class="tile" id="22"></div>
-            <div class="tile" id="23"></div>
-            <div class="tile" id="24"></div>
-            <div class="tile" id="25"></div>
+    <div id="game-container">
+        <h1>Revenge of Lights Out</h1>
+        <div id="play">
+            <button id="start">Start Game</button>
+            <button id="helpBtn">Help</button>
         </div>
-        <div id="win" style="display: none;">You Win!</div>
+        <div id="tiles" style="display: none;">
+            <div class="tile cornerTL" id="1"></div>
+            <div class="tile edgeT" id="2"></div>
+            <div class="tile edgeT" id="3"></div>
+            <div class="tile edgeT" id="4"></div>
+            <div class="tile cornerTR" id="5"></div>
+            <div class="tile edgeL" id="6"></div>
+            <div class="tile middle" id="7"></div>
+            <div class="tile middle" id="8"></div>
+            <div class="tile middle" id="9"></div>
+            <div class="tile edgeR" id="10"></div>
+            <div class="tile edgeL" id="11"></div>
+            <div class="tile middle" id="12"></div>
+            <div class="tile middle" id="13"></div>
+            <div class="tile middle" id="14"></div>
+            <div class="tile edgeR" id="15"></div>
+            <div class="tile edgeL" id="16"></div>
+            <div class="tile middle" id="17"></div>
+            <div class="tile middle" id="18"></div>
+            <div class="tile middle" id="19"></div>
+            <div class="tile edgeR" id="20"></div>
+            <div class="tile cornerBL" id="21"></div>
+            <div class="tile edgeB" id="22"></div>
+            <div class="tile edgeB" id="23"></div>
+            <div class="tile edgeB" id="24"></div>
+            <div class="tile cornerBR" id="25"></div>
+        </div>
+        <div id="move-counter">Counter: <span id="count">0</span></div>
+        <div id="win" style="display: none;">
+            <h2>You Win!</h2>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
     </div>
+
+    <dialog id="helpDialog">
+        <h3>Game Rules</h3>
+                
+                    <p>Initially, some blocks will be randomly filled. Players need to take sufficient time to move the blocks one by one until all the blocks are filled.</p>
+                    <p>Once all the blocks are filled, an alert box will display the message "You Finished The Game Successfully!"</p>
+                    <p>To complete the game, players need to move each block logically based on the positions of the filled blocks.</p>
+                    <p>Press "New Game" to restart the game from the initial state.</p>
+                
+        <button id="closeBtn">Close</button>
+    </dialog>
+
     <footer>
         <p>Last updated: 
             <span id="lastModified"></span>
         </p>
     </footer>
-    <script type="text/javascript">
-         var x = document.lastModified;
-         document.getElementById('lastModified').textContent = x;
-    </script>
+
     <script src="script.js"></script>
     <h3>Addendum</h3>
     <ul>
@@ -67,5 +78,6 @@
         <li><strong>Debugging</strong>: I improved my debugging skills by finding and fixing problems in the code that caused the game to misbehave.</li>
         <li><strong>Learning</strong>: This project taught me the importance of planning, user experience, and problem-solving in game development.</li>
     </ul>
+
 </body>
 </html>
